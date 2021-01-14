@@ -1,0 +1,100 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #D4C2FC;
+    color: #28262C;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr, 2fr, 0.5fr;
+    grid-template-areas: 
+    ". header ."
+    ". content ."
+    ". footer .";
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+main {
+    padding: 0px;
+    margin: 0px;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+    width: 75px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #998FC7;
+    background-color: #F9F5FF;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 630px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1.25fr 0.5fr 0.25fr;
+        grid-template-areas: 
+        "header" 
+        "scoreboard"
+        "content"
+        "content"
+        "footer";
+        grid-column-gap: 0px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    p {
+        padding: 5px;
+    }
+
+    main {
+        align-items: center;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-items: center;
+    }
+
+    button {
+        padding: 0px;
+        margin: 0px;
+        height: 90px;
+        width: 150px;
+        margin: 10px;
+    }
+
+    .fa-3x {
+        font-size: 75px;
+    }
+}
